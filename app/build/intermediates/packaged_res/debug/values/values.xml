@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">OfflineVotingApp</string>
+    <string name="btn_add_option">+ Add Option</string>
+    <string name="btn_create_poll">Create Poll</string>
+    <string name="btn_generate_qr">Generate QR</string>
+    <string name="btn_scan_poll">Scan Poll</string>
+    <string name="btn_scan_qr">Scan QR</string>
+    <string name="btn_submit_vote">Submit Vote</string>
+    <string name="cd_qr_image">QR Code</string>
+    <string name="error_empty_question">Please enter a question</string>
+    <string name="error_min_options">Please add at least 2 options</string>
+    <string name="error_select_option">Please select an option before submitting</string>
+    <string name="hint_poll_question">Poll Question</string>
+    <string name="msg_scan_cancelled">Scan cancelled</string>
+    <string name="nfc_disabled">Please enable NFC in Settings</string>
+    <string name="nfc_not_available">NFC not available on this device</string>
+    <string name="tv_app_subtitle">Create or scan a poll to get started</string>
+    <string name="tv_options_label">Options</string>
+    <string name="tv_poll_placeholder">Poll will appear here</string>
+    <string name="tv_qr_placeholder">QR will be shown here</string>
+    <string name="tv_results_placeholder">Results will appear here</string>
+    <string name="tv_scan_result_placeholder">No QR scanned yet</string>
+    <style name="Theme.OfflineVotingApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
+</resources>

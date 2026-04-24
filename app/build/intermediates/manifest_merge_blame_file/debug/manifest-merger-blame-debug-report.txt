@@ -1,0 +1,253 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.offlinevotingapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="34" />
+10
+11    <!-- Permissions -->
+12    <uses-permission android:name="android.permission.CAMERA" />
+12-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:5:5-65
+12-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:5:22-62
+13    <uses-permission android:name="android.permission.NFC" />
+13-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:6:5-62
+13-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:6:22-59
+14
+15    <!-- NFC feature (optional — app still works without NFC hardware) -->
+16    <uses-feature
+16-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:9:5-11:36
+17        android:name="android.hardware.nfc"
+17-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:10:9-44
+18        android:required="false" />
+18-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:11:9-33
+19
+20    <!-- Camera feature -->
+21    <uses-feature
+21-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:14:5-16:36
+22        android:name="android.hardware.camera"
+22-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:15:9-47
+23        android:required="false" />
+23-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:16:9-33
+24    <uses-feature
+24-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\7f53e76af23ae3dd2569c766e3759b05\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:28:5-30:36
+25        android:name="android.hardware.camera.front"
+25-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\7f53e76af23ae3dd2569c766e3759b05\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:29:9-53
+26        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
+26-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\7f53e76af23ae3dd2569c766e3759b05\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:30:9-33
+27    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+28    <uses-feature
+28-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\7f53e76af23ae3dd2569c766e3759b05\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:33:5-35:36
+29        android:name="android.hardware.camera.autofocus"
+29-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\7f53e76af23ae3dd2569c766e3759b05\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:34:9-57
+30        android:required="false" />
+30-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\7f53e76af23ae3dd2569c766e3759b05\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:35:9-33
+31    <uses-feature
+31-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\7f53e76af23ae3dd2569c766e3759b05\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:36:5-38:36
+32        android:name="android.hardware.camera.flash"
+32-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\7f53e76af23ae3dd2569c766e3759b05\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:37:9-53
+33        android:required="false" />
+33-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\7f53e76af23ae3dd2569c766e3759b05\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:38:9-33
+34    <uses-feature
+34-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\7f53e76af23ae3dd2569c766e3759b05\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:39:5-41:36
+35        android:name="android.hardware.screen.landscape"
+35-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\7f53e76af23ae3dd2569c766e3759b05\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:40:9-57
+36        android:required="false" />
+36-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\7f53e76af23ae3dd2569c766e3759b05\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:41:9-33
+37    <uses-feature
+37-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\7f53e76af23ae3dd2569c766e3759b05\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:42:5-44:36
+38        android:name="android.hardware.wifi"
+38-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\7f53e76af23ae3dd2569c766e3759b05\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:43:9-45
+39        android:required="false" />
+39-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\7f53e76af23ae3dd2569c766e3759b05\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:44:9-33
+40
+41    <permission
+41-->[androidx.core:core:1.9.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\1ba48e7a46549d6e285c12b18ad10990\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+42        android:name="com.example.offlinevotingapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+42-->[androidx.core:core:1.9.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\1ba48e7a46549d6e285c12b18ad10990\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+43        android:protectionLevel="signature" />
+43-->[androidx.core:core:1.9.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\1ba48e7a46549d6e285c12b18ad10990\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+44
+45    <uses-permission android:name="com.example.offlinevotingapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+45-->[androidx.core:core:1.9.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\1ba48e7a46549d6e285c12b18ad10990\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+45-->[androidx.core:core:1.9.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\1ba48e7a46549d6e285c12b18ad10990\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+46
+47    <application
+47-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:18:5-69:19
+48        android:allowBackup="true"
+48-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:19:9-35
+49        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+49-->[androidx.core:core:1.9.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\1ba48e7a46549d6e285c12b18ad10990\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+50        android:debuggable="true"
+51        android:extractNativeLibs="false"
+52        android:icon="@mipmap/ic_launcher"
+52-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:20:9-43
+53        android:label="@string/app_name"
+53-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:21:9-41
+54        android:roundIcon="@mipmap/ic_launcher_round"
+54-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:22:9-54
+55        android:supportsRtl="true"
+55-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:23:9-35
+56        android:testOnly="true"
+57        android:theme="@style/Theme.OfflineVotingApp" >
+57-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:24:9-54
+58
+59        <!-- MainActivity — NFC foreground dispatch intent filter -->
+60        <activity
+60-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:27:9-42:20
+61            android:name="com.example.offlinevotingapp.activities.MainActivity"
+61-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:28:13-52
+62            android:exported="true"
+62-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:29:13-36
+63            android:launchMode="singleTop" >
+63-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:30:13-43
+64            <intent-filter>
+64-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:31:13-34:29
+65                <action android:name="android.intent.action.MAIN" />
+65-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:32:17-69
+65-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:32:25-66
+66
+67                <category android:name="android.intent.category.LAUNCHER" />
+67-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:33:17-77
+67-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:33:27-74
+68            </intent-filter>
+69
+70            <!-- NFC NDEF intent filter -->
+71            <intent-filter>
+71-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:37:13-41:29
+72                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+72-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:38:17-77
+72-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:38:25-74
+73
+74                <category android:name="android.intent.category.DEFAULT" />
+74-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:39:17-76
+74-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:39:27-73
+75
+76                <data android:mimeType="text/plain" />
+76-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:40:17-55
+76-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:40:23-52
+77            </intent-filter>
+78        </activity>
+79        <activity
+79-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:44:9-47:58
+80            android:name="com.example.offlinevotingapp.activities.CreatePollActivity"
+80-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:45:13-58
+81            android:exported="false"
+81-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:46:13-37
+82            android:windowSoftInputMode="adjustResize" />
+82-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:47:13-55
+83        <activity
+83-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:49:9-51:40
+84            android:name="com.example.offlinevotingapp.activities.ShowQRActivity"
+84-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:50:13-54
+85            android:exported="false" />
+85-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:51:13-37
+86        <activity
+86-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:53:9-55:40
+87            android:name="com.example.offlinevotingapp.activities.ScanPollActivity"
+87-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:54:13-56
+88            android:exported="false" />
+88-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:55:13-37
+89        <activity
+89-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:57:9-59:40
+90            android:name="com.example.offlinevotingapp.activities.VoteActivity"
+90-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:58:13-52
+91            android:exported="false" />
+91-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:59:13-37
+92        <activity
+92-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:61:9-63:40
+93            android:name="com.example.offlinevotingapp.activities.ResultActivity"
+93-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:62:13-54
+94            android:exported="false" />
+94-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:63:13-37
+95        <activity
+95-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:65:9-67:40
+96            android:name="com.example.offlinevotingapp.activities.ScanVoteActivity"
+96-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:66:13-56
+97            android:exported="false" />
+97-->C:\Users\ksnau\.gemini\antigravity\scratch\OfflineVotingApp\app\src\main\AndroidManifest.xml:67:13-37
+98        <activity
+98-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\7f53e76af23ae3dd2569c766e3759b05\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:47:9-53:63
+99            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+99-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\7f53e76af23ae3dd2569c766e3759b05\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:48:13-74
+100            android:clearTaskOnLaunch="true"
+100-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\7f53e76af23ae3dd2569c766e3759b05\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:49:13-45
+101            android:screenOrientation="sensorLandscape"
+101-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\7f53e76af23ae3dd2569c766e3759b05\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:50:13-56
+102            android:stateNotNeeded="true"
+102-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\7f53e76af23ae3dd2569c766e3759b05\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:51:13-42
+103            android:theme="@style/zxing_CaptureTheme"
+103-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\7f53e76af23ae3dd2569c766e3759b05\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:52:13-54
+104            android:windowSoftInputMode="stateAlwaysHidden" />
+104-->[com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\7f53e76af23ae3dd2569c766e3759b05\transformed\jetified-zxing-android-embedded-4.3.0\AndroidManifest.xml:53:13-60
+105
+106        <provider
+106-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\c1da7ab6cb7cc87b6a302e26ee3c9c62\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+107            android:name="androidx.startup.InitializationProvider"
+107-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\c1da7ab6cb7cc87b6a302e26ee3c9c62\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+108            android:authorities="com.example.offlinevotingapp.androidx-startup"
+108-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\c1da7ab6cb7cc87b6a302e26ee3c9c62\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+109            android:exported="false" >
+109-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\c1da7ab6cb7cc87b6a302e26ee3c9c62\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+110            <meta-data
+110-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\c1da7ab6cb7cc87b6a302e26ee3c9c62\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+111                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+111-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\c1da7ab6cb7cc87b6a302e26ee3c9c62\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+112                android:value="androidx.startup" />
+112-->[androidx.emoji2:emoji2:1.2.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\c1da7ab6cb7cc87b6a302e26ee3c9c62\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+113            <meta-data
+113-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ksnau\.gradle\caches\8.9\transforms\e8d29a830078e08380df9aa8b376df3a\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
+114                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+114-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ksnau\.gradle\caches\8.9\transforms\e8d29a830078e08380df9aa8b376df3a\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
+115                android:value="androidx.startup" />
+115-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\ksnau\.gradle\caches\8.9\transforms\e8d29a830078e08380df9aa8b376df3a\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+116            <meta-data
+116-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\9b26d396e10ef68a4f332c6299c0ffec\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+117                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+117-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\9b26d396e10ef68a4f332c6299c0ffec\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+118                android:value="androidx.startup" />
+118-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\9b26d396e10ef68a4f332c6299c0ffec\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+119        </provider>
+120
+121        <receiver
+121-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\9b26d396e10ef68a4f332c6299c0ffec\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+122            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+122-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\9b26d396e10ef68a4f332c6299c0ffec\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+123            android:directBootAware="false"
+123-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\9b26d396e10ef68a4f332c6299c0ffec\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+124            android:enabled="true"
+124-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\9b26d396e10ef68a4f332c6299c0ffec\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+125            android:exported="true"
+125-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\9b26d396e10ef68a4f332c6299c0ffec\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+126            android:permission="android.permission.DUMP" >
+126-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\9b26d396e10ef68a4f332c6299c0ffec\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+127            <intent-filter>
+127-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\9b26d396e10ef68a4f332c6299c0ffec\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+128                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+128-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\9b26d396e10ef68a4f332c6299c0ffec\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+128-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\9b26d396e10ef68a4f332c6299c0ffec\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+129            </intent-filter>
+130            <intent-filter>
+130-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\9b26d396e10ef68a4f332c6299c0ffec\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+131                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+131-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\9b26d396e10ef68a4f332c6299c0ffec\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+131-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\9b26d396e10ef68a4f332c6299c0ffec\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+132            </intent-filter>
+133            <intent-filter>
+133-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\9b26d396e10ef68a4f332c6299c0ffec\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+134                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+134-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\9b26d396e10ef68a4f332c6299c0ffec\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+134-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\9b26d396e10ef68a4f332c6299c0ffec\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+135            </intent-filter>
+136            <intent-filter>
+136-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\9b26d396e10ef68a4f332c6299c0ffec\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+137                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+137-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\9b26d396e10ef68a4f332c6299c0ffec\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+137-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\ksnau\.gradle\caches\8.9\transforms\9b26d396e10ef68a4f332c6299c0ffec\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+138            </intent-filter>
+139        </receiver>
+140    </application>
+141
+142</manifest>

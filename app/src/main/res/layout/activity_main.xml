@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tvAppTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Offline Voting App"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tvAppSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create or scan a poll to get started"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="48dp" />
+
+    <Button
+        android:id="@+id/btnCreatePoll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Poll"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        style="@style/Widget.MaterialComponents.Button" />
+
+    <Button
+        android:id="@+id/btnScanPoll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scan Poll"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+    <Button
+        android:id="@+id/btnScanVote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Receive Vote QR"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+    <Button
+        android:id="@+id/btnViewResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Results"
+        android:textSize="16sp"
+        style="@style/Widget.MaterialComponents.Button.TextButton" />
+
+</LinearLayout>

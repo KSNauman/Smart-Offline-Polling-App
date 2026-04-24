@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tvScanPollTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan a Poll QR Code"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp" />
+
+    <Button
+        android:id="@+id/btnScanQr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scan QR"
+        android:textSize="16sp"
+        android:layout_marginBottom="24dp"
+        style="@style/Widget.MaterialComponents.Button" />
+
+    <!-- Placeholder for scan result -->
+    <TextView
+        android:id="@+id/tvScanResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No QR scanned yet"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:gravity="center"
+        android:padding="12dp"
+        android:background="#F5F5F5" />
+
+</LinearLayout>

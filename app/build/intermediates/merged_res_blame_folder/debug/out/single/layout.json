@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "com.example.offlinevotingapp-mergeDebugResources-3:/layout/activity_result.xml",
+        "source": "com.example.offlinevotingapp-main-6:/layout/activity_result.xml"
+    },
+    {
+        "merged": "com.example.offlinevotingapp-mergeDebugResources-3:/layout/activity_main.xml",
+        "source": "com.example.offlinevotingapp-main-6:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.offlinevotingapp-mergeDebugResources-3:/layout/activity_show_qr.xml",
+        "source": "com.example.offlinevotingapp-main-6:/layout/activity_show_qr.xml"
+    },
+    {
+        "merged": "com.example.offlinevotingapp-mergeDebugResources-3:/layout/activity_scan_poll.xml",
+        "source": "com.example.offlinevotingapp-main-6:/layout/activity_scan_poll.xml"
+    },
+    {
+        "merged": "com.example.offlinevotingapp-mergeDebugResources-3:/layout/activity_scan_vote.xml",
+        "source": "com.example.offlinevotingapp-main-6:/layout/activity_scan_vote.xml"
+    },
+    {
+        "merged": "com.example.offlinevotingapp-mergeDebugResources-3:/layout/activity_create_poll.xml",
+        "source": "com.example.offlinevotingapp-main-6:/layout/activity_create_poll.xml"
+    },
+    {
+        "merged": "com.example.offlinevotingapp-mergeDebugResources-3:/layout/activity_vote.xml",
+        "source": "com.example.offlinevotingapp-main-6:/layout/activity_vote.xml"
+    }
+]
