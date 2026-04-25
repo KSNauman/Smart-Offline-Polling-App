@@ -4,52 +4,49 @@ package com.example.offlinevotingapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.RadioGroup;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.offlinevotingapp.R;
+import com.google.android.material.button.MaterialButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class ActivityVoteBinding implements ViewBinding {
   @NonNull
-  private final ScrollView rootView;
+  private final LinearLayout rootView;
 
   @NonNull
-  public final Button btnSubmitVote;
+  public final ImageButton btnBack;
+
+  @NonNull
+  public final MaterialButton btnSubmitVote;
 
   @NonNull
   public final RadioGroup rgVoteOptions;
 
   @NonNull
-  public final TextView tvOptionsLabel;
-
-  @NonNull
   public final TextView tvPollQuestion;
 
-  @NonNull
-  public final TextView tvVoteTitle;
-
-  private ActivityVoteBinding(@NonNull ScrollView rootView, @NonNull Button btnSubmitVote,
-      @NonNull RadioGroup rgVoteOptions, @NonNull TextView tvOptionsLabel,
-      @NonNull TextView tvPollQuestion, @NonNull TextView tvVoteTitle) {
+  private ActivityVoteBinding(@NonNull LinearLayout rootView, @NonNull ImageButton btnBack,
+      @NonNull MaterialButton btnSubmitVote, @NonNull RadioGroup rgVoteOptions,
+      @NonNull TextView tvPollQuestion) {
     this.rootView = rootView;
+    this.btnBack = btnBack;
     this.btnSubmitVote = btnSubmitVote;
     this.rgVoteOptions = rgVoteOptions;
-    this.tvOptionsLabel = tvOptionsLabel;
     this.tvPollQuestion = tvPollQuestion;
-    this.tvVoteTitle = tvVoteTitle;
   }
 
   @Override
   @NonNull
-  public ScrollView getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -74,8 +71,14 @@ public final class ActivityVoteBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnBack;
+      ImageButton btnBack = ViewBindings.findChildViewById(rootView, id);
+      if (btnBack == null) {
+        break missingId;
+      }
+
       id = R.id.btnSubmitVote;
-      Button btnSubmitVote = ViewBindings.findChildViewById(rootView, id);
+      MaterialButton btnSubmitVote = ViewBindings.findChildViewById(rootView, id);
       if (btnSubmitVote == null) {
         break missingId;
       }
@@ -86,26 +89,14 @@ public final class ActivityVoteBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tvOptionsLabel;
-      TextView tvOptionsLabel = ViewBindings.findChildViewById(rootView, id);
-      if (tvOptionsLabel == null) {
-        break missingId;
-      }
-
       id = R.id.tvPollQuestion;
       TextView tvPollQuestion = ViewBindings.findChildViewById(rootView, id);
       if (tvPollQuestion == null) {
         break missingId;
       }
 
-      id = R.id.tvVoteTitle;
-      TextView tvVoteTitle = ViewBindings.findChildViewById(rootView, id);
-      if (tvVoteTitle == null) {
-        break missingId;
-      }
-
-      return new ActivityVoteBinding((ScrollView) rootView, btnSubmitVote, rgVoteOptions,
-          tvOptionsLabel, tvPollQuestion, tvVoteTitle);
+      return new ActivityVoteBinding((LinearLayout) rootView, btnBack, btnSubmitVote, rgVoteOptions,
+          tvPollQuestion);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

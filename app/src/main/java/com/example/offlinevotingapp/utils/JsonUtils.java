@@ -136,6 +136,7 @@ public class JsonUtils {
             voteJson.put("poll_id",   vote.getPollId());
             voteJson.put("option_id", vote.getOptionId());
             voteJson.put("device_id", vote.getDeviceId());
+            voteJson.put("user_name", vote.getUserName());
             
             return voteJson.toString();
         } catch (JSONException e) {
@@ -160,8 +161,9 @@ public class JsonUtils {
             String pollId = voteJson.getString("poll_id");
             String optionId = voteJson.getString("option_id");
             String deviceId = voteJson.getString("device_id");
+            String userName = voteJson.optString("user_name", "Anonymous");
 
-            return new Vote(pollId, optionId, deviceId);
+            return new Vote(pollId, optionId, deviceId, userName);
         } catch (JSONException e) {
             e.printStackTrace();
             return null;

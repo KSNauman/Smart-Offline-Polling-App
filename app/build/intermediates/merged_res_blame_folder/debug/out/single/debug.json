@@ -4,43 +4,79 @@
         "source": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-main-6:\\layout\\activity_scan_poll.xml"
     },
     {
-        "merged": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-merged_res-4:\\layout_activity_scan_vote.xml.flat",
-        "source": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-main-6:\\layout\\activity_scan_vote.xml"
+        "merged": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-merged_res-4:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-main-6:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
         "merged": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-merged_res-4:\\layout_activity_result.xml.flat",
         "source": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-main-6:\\layout\\activity_result.xml"
     },
     {
-        "merged": "com.example.offlinevotingapp-merged_res-4:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.example.offlinevotingapp-main-6:/drawable/ic_launcher_background.xml"
+        "merged": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-merged_res-4:\\drawable_ic_nfc_tap.png.flat",
+        "source": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-main-6:\\drawable\\ic_nfc_tap.png"
     },
     {
-        "merged": "com.example.offlinevotingapp-merged_res-4:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.example.offlinevotingapp-main-6:/drawable/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-merged_res-4:\\layout_item_result_option.xml.flat",
+        "source": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-main-6:\\layout\\item_result_option.xml"
     },
     {
-        "merged": "com.example.offlinevotingapp-merged_res-4:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.example.offlinevotingapp-main-6:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-merged_res-4:\\drawable_selector_vote_option.xml.flat",
+        "source": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-main-6:\\drawable\\selector_vote_option.xml"
     },
     {
-        "merged": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-merged_res-4:\\layout_activity_create_poll.xml.flat",
-        "source": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-main-6:\\layout\\activity_create_poll.xml"
+        "merged": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-merged_res-4:\\layout_item_option_input.xml.flat",
+        "source": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-main-6:\\layout\\item_option_input.xml"
     },
     {
-        "merged": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-merged_res-4:\\layout_activity_show_qr.xml.flat",
-        "source": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-main-6:\\layout\\activity_show_qr.xml"
+        "merged": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-merged_res-4:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-main-6:\\drawable\\ic_launcher_foreground.xml"
     },
     {
         "merged": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-merged_res-4:\\layout_activity_vote.xml.flat",
         "source": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-main-6:\\layout\\activity_vote.xml"
     },
     {
-        "merged": "com.example.offlinevotingapp-merged_res-4:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.example.offlinevotingapp-main-6:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-merged_res-4:\\layout_item_vote_option.xml.flat",
+        "source": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-main-6:\\layout\\item_vote_option.xml"
     },
     {
         "merged": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-merged_res-4:\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-main-6:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-merged_res-4:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-main-6:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.offlinevotingapp-merged_res-4:/layout_activity_scan_vote.xml.flat",
+        "source": "com.example.offlinevotingapp-main-6:/layout/activity_scan_vote.xml"
+    },
+    {
+        "merged": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-merged_res-4:\\layout_item_poll.xml.flat",
+        "source": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-main-6:\\layout\\item_poll.xml"
+    },
+    {
+        "merged": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-merged_res-4:\\layout_activity_scan_vote.xml.flat",
+        "source": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-main-6:\\layout\\activity_scan_vote.xml"
+    },
+    {
+        "merged": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-merged_res-4:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-main-6:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-merged_res-4:\\layout_activity_create_poll.xml.flat",
+        "source": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-main-6:\\layout\\activity_create_poll.xml"
+    },
+    {
+        "merged": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-merged_res-4:\\drawable_progress_drawable.xml.flat",
+        "source": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-main-6:\\drawable\\progress_drawable.xml"
+    },
+    {
+        "merged": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-merged_res-4:\\layout_activity_show_qr.xml.flat",
+        "source": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-main-6:\\layout\\activity_show_qr.xml"
+    },
+    {
+        "merged": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-merged_res-4:\\layout_activity_registration.xml.flat",
+        "source": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-main-6:\\layout\\activity_registration.xml"
     }
 ]

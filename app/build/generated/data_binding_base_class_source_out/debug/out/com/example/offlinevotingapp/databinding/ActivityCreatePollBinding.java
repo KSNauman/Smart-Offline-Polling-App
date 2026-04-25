@@ -4,30 +4,31 @@ package com.example.offlinevotingapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.offlinevotingapp.R;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class ActivityCreatePollBinding implements ViewBinding {
   @NonNull
-  private final ScrollView rootView;
+  private final LinearLayout rootView;
 
   @NonNull
-  public final Button btnAddOption;
+  public final MaterialButton btnAddOption;
 
   @NonNull
-  public final Button btnGenerateQr;
+  public final ImageButton btnBack;
+
+  @NonNull
+  public final MaterialButton btnGenerateQr;
 
   @NonNull
   public final TextInputEditText etQuestion;
@@ -35,32 +36,21 @@ public final class ActivityCreatePollBinding implements ViewBinding {
   @NonNull
   public final LinearLayout llOptionsContainer;
 
-  @NonNull
-  public final TextInputLayout tilQuestion;
-
-  @NonNull
-  public final TextView tvCreatePollTitle;
-
-  @NonNull
-  public final TextView tvOptionsLabel;
-
-  private ActivityCreatePollBinding(@NonNull ScrollView rootView, @NonNull Button btnAddOption,
-      @NonNull Button btnGenerateQr, @NonNull TextInputEditText etQuestion,
-      @NonNull LinearLayout llOptionsContainer, @NonNull TextInputLayout tilQuestion,
-      @NonNull TextView tvCreatePollTitle, @NonNull TextView tvOptionsLabel) {
+  private ActivityCreatePollBinding(@NonNull LinearLayout rootView,
+      @NonNull MaterialButton btnAddOption, @NonNull ImageButton btnBack,
+      @NonNull MaterialButton btnGenerateQr, @NonNull TextInputEditText etQuestion,
+      @NonNull LinearLayout llOptionsContainer) {
     this.rootView = rootView;
     this.btnAddOption = btnAddOption;
+    this.btnBack = btnBack;
     this.btnGenerateQr = btnGenerateQr;
     this.etQuestion = etQuestion;
     this.llOptionsContainer = llOptionsContainer;
-    this.tilQuestion = tilQuestion;
-    this.tvCreatePollTitle = tvCreatePollTitle;
-    this.tvOptionsLabel = tvOptionsLabel;
   }
 
   @Override
   @NonNull
-  public ScrollView getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -86,13 +76,19 @@ public final class ActivityCreatePollBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btnAddOption;
-      Button btnAddOption = ViewBindings.findChildViewById(rootView, id);
+      MaterialButton btnAddOption = ViewBindings.findChildViewById(rootView, id);
       if (btnAddOption == null) {
         break missingId;
       }
 
+      id = R.id.btnBack;
+      ImageButton btnBack = ViewBindings.findChildViewById(rootView, id);
+      if (btnBack == null) {
+        break missingId;
+      }
+
       id = R.id.btnGenerateQr;
-      Button btnGenerateQr = ViewBindings.findChildViewById(rootView, id);
+      MaterialButton btnGenerateQr = ViewBindings.findChildViewById(rootView, id);
       if (btnGenerateQr == null) {
         break missingId;
       }
@@ -109,26 +105,8 @@ public final class ActivityCreatePollBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tilQuestion;
-      TextInputLayout tilQuestion = ViewBindings.findChildViewById(rootView, id);
-      if (tilQuestion == null) {
-        break missingId;
-      }
-
-      id = R.id.tvCreatePollTitle;
-      TextView tvCreatePollTitle = ViewBindings.findChildViewById(rootView, id);
-      if (tvCreatePollTitle == null) {
-        break missingId;
-      }
-
-      id = R.id.tvOptionsLabel;
-      TextView tvOptionsLabel = ViewBindings.findChildViewById(rootView, id);
-      if (tvOptionsLabel == null) {
-        break missingId;
-      }
-
-      return new ActivityCreatePollBinding((ScrollView) rootView, btnAddOption, btnGenerateQr,
-          etQuestion, llOptionsContainer, tilQuestion, tvCreatePollTitle, tvOptionsLabel);
+      return new ActivityCreatePollBinding((LinearLayout) rootView, btnAddOption, btnBack,
+          btnGenerateQr, etQuestion, llOptionsContainer);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

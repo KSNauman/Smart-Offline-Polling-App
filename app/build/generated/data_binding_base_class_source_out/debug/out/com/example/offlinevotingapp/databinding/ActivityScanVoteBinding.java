@@ -4,7 +4,7 @@ package com.example.offlinevotingapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.offlinevotingapp.R;
+import com.google.android.material.button.MaterialButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -21,20 +22,20 @@ public final class ActivityScanVoteBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final Button btnScanVoteQr;
+  public final ImageButton btnBack;
+
+  @NonNull
+  public final MaterialButton btnScanVoteQr;
 
   @NonNull
   public final TextView tvScanResult;
 
-  @NonNull
-  public final TextView tvScanVoteTitle;
-
-  private ActivityScanVoteBinding(@NonNull LinearLayout rootView, @NonNull Button btnScanVoteQr,
-      @NonNull TextView tvScanResult, @NonNull TextView tvScanVoteTitle) {
+  private ActivityScanVoteBinding(@NonNull LinearLayout rootView, @NonNull ImageButton btnBack,
+      @NonNull MaterialButton btnScanVoteQr, @NonNull TextView tvScanResult) {
     this.rootView = rootView;
+    this.btnBack = btnBack;
     this.btnScanVoteQr = btnScanVoteQr;
     this.tvScanResult = tvScanResult;
-    this.tvScanVoteTitle = tvScanVoteTitle;
   }
 
   @Override
@@ -64,8 +65,14 @@ public final class ActivityScanVoteBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnBack;
+      ImageButton btnBack = ViewBindings.findChildViewById(rootView, id);
+      if (btnBack == null) {
+        break missingId;
+      }
+
       id = R.id.btnScanVoteQr;
-      Button btnScanVoteQr = ViewBindings.findChildViewById(rootView, id);
+      MaterialButton btnScanVoteQr = ViewBindings.findChildViewById(rootView, id);
       if (btnScanVoteQr == null) {
         break missingId;
       }
@@ -76,14 +83,8 @@ public final class ActivityScanVoteBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tvScanVoteTitle;
-      TextView tvScanVoteTitle = ViewBindings.findChildViewById(rootView, id);
-      if (tvScanVoteTitle == null) {
-        break missingId;
-      }
-
-      return new ActivityScanVoteBinding((LinearLayout) rootView, btnScanVoteQr, tvScanResult,
-          tvScanVoteTitle);
+      return new ActivityScanVoteBinding((LinearLayout) rootView, btnBack, btnScanVoteQr,
+          tvScanResult);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

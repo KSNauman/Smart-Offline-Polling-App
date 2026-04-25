@@ -4,55 +4,59 @@ package com.example.offlinevotingapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.offlinevotingapp.R;
+import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class ActivityMainBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final CoordinatorLayout rootView;
 
   @NonNull
-  public final Button btnCreatePoll;
+  public final FloatingActionButton btnCreatePoll;
 
   @NonNull
-  public final Button btnScanPoll;
+  public final MaterialButton btnScanPoll;
 
   @NonNull
-  public final Button btnScanVote;
+  public final MaterialButton btnScanVote;
 
   @NonNull
-  public final Button btnViewResults;
+  public final RecyclerView rvPolls;
 
   @NonNull
-  public final TextView tvAppSubtitle;
+  public final MaterialToolbar toolbar;
 
   @NonNull
-  public final TextView tvAppTitle;
+  public final TextView tvEmptyState;
 
-  private ActivityMainBinding(@NonNull LinearLayout rootView, @NonNull Button btnCreatePoll,
-      @NonNull Button btnScanPoll, @NonNull Button btnScanVote, @NonNull Button btnViewResults,
-      @NonNull TextView tvAppSubtitle, @NonNull TextView tvAppTitle) {
+  private ActivityMainBinding(@NonNull CoordinatorLayout rootView,
+      @NonNull FloatingActionButton btnCreatePoll, @NonNull MaterialButton btnScanPoll,
+      @NonNull MaterialButton btnScanVote, @NonNull RecyclerView rvPolls,
+      @NonNull MaterialToolbar toolbar, @NonNull TextView tvEmptyState) {
     this.rootView = rootView;
     this.btnCreatePoll = btnCreatePoll;
     this.btnScanPoll = btnScanPoll;
     this.btnScanVote = btnScanVote;
-    this.btnViewResults = btnViewResults;
-    this.tvAppSubtitle = tvAppSubtitle;
-    this.tvAppTitle = tvAppTitle;
+    this.rvPolls = rvPolls;
+    this.toolbar = toolbar;
+    this.tvEmptyState = tvEmptyState;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public CoordinatorLayout getRoot() {
     return rootView;
   }
 
@@ -78,43 +82,43 @@ public final class ActivityMainBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btnCreatePoll;
-      Button btnCreatePoll = ViewBindings.findChildViewById(rootView, id);
+      FloatingActionButton btnCreatePoll = ViewBindings.findChildViewById(rootView, id);
       if (btnCreatePoll == null) {
         break missingId;
       }
 
       id = R.id.btnScanPoll;
-      Button btnScanPoll = ViewBindings.findChildViewById(rootView, id);
+      MaterialButton btnScanPoll = ViewBindings.findChildViewById(rootView, id);
       if (btnScanPoll == null) {
         break missingId;
       }
 
       id = R.id.btnScanVote;
-      Button btnScanVote = ViewBindings.findChildViewById(rootView, id);
+      MaterialButton btnScanVote = ViewBindings.findChildViewById(rootView, id);
       if (btnScanVote == null) {
         break missingId;
       }
 
-      id = R.id.btnViewResults;
-      Button btnViewResults = ViewBindings.findChildViewById(rootView, id);
-      if (btnViewResults == null) {
+      id = R.id.rvPolls;
+      RecyclerView rvPolls = ViewBindings.findChildViewById(rootView, id);
+      if (rvPolls == null) {
         break missingId;
       }
 
-      id = R.id.tvAppSubtitle;
-      TextView tvAppSubtitle = ViewBindings.findChildViewById(rootView, id);
-      if (tvAppSubtitle == null) {
+      id = R.id.toolbar;
+      MaterialToolbar toolbar = ViewBindings.findChildViewById(rootView, id);
+      if (toolbar == null) {
         break missingId;
       }
 
-      id = R.id.tvAppTitle;
-      TextView tvAppTitle = ViewBindings.findChildViewById(rootView, id);
-      if (tvAppTitle == null) {
+      id = R.id.tvEmptyState;
+      TextView tvEmptyState = ViewBindings.findChildViewById(rootView, id);
+      if (tvEmptyState == null) {
         break missingId;
       }
 
-      return new ActivityMainBinding((LinearLayout) rootView, btnCreatePoll, btnScanPoll,
-          btnScanVote, btnViewResults, tvAppSubtitle, tvAppTitle);
+      return new ActivityMainBinding((CoordinatorLayout) rootView, btnCreatePoll, btnScanPoll,
+          btnScanVote, rvPolls, toolbar, tvEmptyState);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -28,10 +28,6 @@
     <!-- ResultActivity -->
     <string name="tv_results_placeholder">Results will appear here</string>
 
-    <!-- NFC Messages -->
-    <string name="nfc_not_available">NFC not available on this device</string>
-    <string name="nfc_disabled">Please enable NFC in Settings</string>
-
     <!-- Error messages -->
     <string name="error_empty_question">Please enter a question</string>
     <string name="error_min_options">Please add at least 2 options</string>

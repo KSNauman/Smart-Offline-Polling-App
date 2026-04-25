@@ -1,67 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_height="?attr/actionBarSize"
+        android:paddingHorizontal="16dp">
 
-        <!-- Screen title -->
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="@color/white" />
+
         <TextView
-            android:id="@+id/tvVoteTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
             android:text="Cast Your Vote"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="16dp" />
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
 
-        <!-- Poll question — populated dynamically from parsed JSON -->
-        <TextView
-            android:id="@+id/tvPollQuestion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="17sp"
-            android:textColor="#1A1A1A"
-            android:textStyle="bold"
-            android:padding="14dp"
-            android:background="#EEF2FF"
-            android:layout_marginBottom="20dp" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-        <!-- "Select your choice" label -->
-        <TextView
-            android:id="@+id/tvOptionsLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Select your choice:"
-            android:textSize="14sp"
-            android:textColor="#666666"
-            android:layout_marginBottom="8dp" />
-
-        <!--
-            RadioGroup — all RadioButtons are added programmatically in VoteActivity.
-            No placeholder children here; placeholder XML buttons have been removed.
-        -->
-        <RadioGroup
-            android:id="@+id/rgVoteOptions"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginBottom="28dp" />
+            android:padding="24dp">
 
-        <!-- Submit button -->
-        <Button
-            android:id="@+id/btnSubmitVote"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Submit Vote"
-            android:textSize="16sp"
-            style="@style/Widget.MaterialComponents.Button" />
+            <TextView
+                android:id="@+id/tvPollQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Poll Question"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Choose one option"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
-</ScrollView>
+            <RadioGroup
+                android:id="@+id/rgVoteOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSubmitVote"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="24dp"
+        android:text="Submit Vote"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:backgroundTint="@color/primary_blue"
+        app:cornerRadius="12dp" />
+
+</LinearLayout>

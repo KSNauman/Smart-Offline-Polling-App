@@ -9,15 +9,17 @@ public class Vote {
     private String pollId;
     private String optionId;
     private String deviceId;
+    private String userName;
 
     public Vote() {
         // Default constructor
     }
 
-    public Vote(String pollId, String optionId, String deviceId) {
+    public Vote(String pollId, String optionId, String deviceId, String userName) {
         this.pollId = pollId;
         this.optionId = optionId;
         this.deviceId = deviceId;
+        this.userName = userName;
     }
 
     // --- Getters ---
@@ -34,6 +36,10 @@ public class Vote {
         return deviceId;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
     // --- Setters ---
 
     public void setPollId(String pollId) {
@@ -48,8 +54,12 @@ public class Vote {
         this.deviceId = deviceId;
     }
 
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
     @Override
     public String toString() {
-        return "Vote{pollId='" + pollId + "', optionId='" + optionId + "', deviceId='" + deviceId + "'}";
+        return "Vote{pollId='" + pollId + "', optionId='" + optionId + "', deviceId='" + deviceId + "', userName='" + userName + "'}";
     }
 }

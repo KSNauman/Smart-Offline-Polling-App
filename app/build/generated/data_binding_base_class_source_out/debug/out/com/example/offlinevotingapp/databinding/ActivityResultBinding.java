@@ -4,37 +4,57 @@ package com.example.offlinevotingapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ScrollView;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.offlinevotingapp.R;
+import com.google.android.material.button.MaterialButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class ActivityResultBinding implements ViewBinding {
   @NonNull
-  private final ScrollView rootView;
+  private final LinearLayout rootView;
 
   @NonNull
-  public final TextView tvResultTitle;
+  public final ImageButton btnBack;
 
   @NonNull
-  public final TextView tvResults;
+  public final MaterialButton btnReshowMyVote;
 
-  private ActivityResultBinding(@NonNull ScrollView rootView, @NonNull TextView tvResultTitle,
-      @NonNull TextView tvResults) {
+  @NonNull
+  public final MaterialButton btnReshowPollQr;
+
+  @NonNull
+  public final LinearLayout llResultsContainer;
+
+  @NonNull
+  public final TextView tvPollQuestion;
+
+  @NonNull
+  public final TextView tvTotalVotes;
+
+  private ActivityResultBinding(@NonNull LinearLayout rootView, @NonNull ImageButton btnBack,
+      @NonNull MaterialButton btnReshowMyVote, @NonNull MaterialButton btnReshowPollQr,
+      @NonNull LinearLayout llResultsContainer, @NonNull TextView tvPollQuestion,
+      @NonNull TextView tvTotalVotes) {
     this.rootView = rootView;
-    this.tvResultTitle = tvResultTitle;
-    this.tvResults = tvResults;
+    this.btnBack = btnBack;
+    this.btnReshowMyVote = btnReshowMyVote;
+    this.btnReshowPollQr = btnReshowPollQr;
+    this.llResultsContainer = llResultsContainer;
+    this.tvPollQuestion = tvPollQuestion;
+    this.tvTotalVotes = tvTotalVotes;
   }
 
   @Override
   @NonNull
-  public ScrollView getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -59,19 +79,44 @@ public final class ActivityResultBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.tvResultTitle;
-      TextView tvResultTitle = ViewBindings.findChildViewById(rootView, id);
-      if (tvResultTitle == null) {
+      id = R.id.btnBack;
+      ImageButton btnBack = ViewBindings.findChildViewById(rootView, id);
+      if (btnBack == null) {
         break missingId;
       }
 
-      id = R.id.tvResults;
-      TextView tvResults = ViewBindings.findChildViewById(rootView, id);
-      if (tvResults == null) {
+      id = R.id.btnReshowMyVote;
+      MaterialButton btnReshowMyVote = ViewBindings.findChildViewById(rootView, id);
+      if (btnReshowMyVote == null) {
         break missingId;
       }
 
-      return new ActivityResultBinding((ScrollView) rootView, tvResultTitle, tvResults);
+      id = R.id.btnReshowPollQr;
+      MaterialButton btnReshowPollQr = ViewBindings.findChildViewById(rootView, id);
+      if (btnReshowPollQr == null) {
+        break missingId;
+      }
+
+      id = R.id.llResultsContainer;
+      LinearLayout llResultsContainer = ViewBindings.findChildViewById(rootView, id);
+      if (llResultsContainer == null) {
+        break missingId;
+      }
+
+      id = R.id.tvPollQuestion;
+      TextView tvPollQuestion = ViewBindings.findChildViewById(rootView, id);
+      if (tvPollQuestion == null) {
+        break missingId;
+      }
+
+      id = R.id.tvTotalVotes;
+      TextView tvTotalVotes = ViewBindings.findChildViewById(rootView, id);
+      if (tvTotalVotes == null) {
+        break missingId;
+      }
+
+      return new ActivityResultBinding((LinearLayout) rootView, btnBack, btnReshowMyVote,
+          btnReshowPollQr, llResultsContainer, tvPollQuestion, tvTotalVotes);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -4,51 +4,53 @@ package com.example.offlinevotingapp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.ScrollView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.offlinevotingapp.R;
+import com.google.android.material.button.MaterialButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class ActivityShowQrBinding implements ViewBinding {
   @NonNull
-  private final ScrollView rootView;
+  private final LinearLayout rootView;
+
+  @NonNull
+  public final ImageButton btnBack;
+
+  @NonNull
+  public final MaterialButton btnDone;
 
   @NonNull
   public final ImageView ivQrCode;
 
   @NonNull
-  public final TextView tvDebugLabel;
+  public final TextView tvQrHint;
 
   @NonNull
-  public final TextView tvPollJson;
+  public final TextView tvScreenTitle;
 
-  @NonNull
-  public final TextView tvQrPlaceholder;
-
-  @NonNull
-  public final TextView tvShowQrTitle;
-
-  private ActivityShowQrBinding(@NonNull ScrollView rootView, @NonNull ImageView ivQrCode,
-      @NonNull TextView tvDebugLabel, @NonNull TextView tvPollJson,
-      @NonNull TextView tvQrPlaceholder, @NonNull TextView tvShowQrTitle) {
+  private ActivityShowQrBinding(@NonNull LinearLayout rootView, @NonNull ImageButton btnBack,
+      @NonNull MaterialButton btnDone, @NonNull ImageView ivQrCode, @NonNull TextView tvQrHint,
+      @NonNull TextView tvScreenTitle) {
     this.rootView = rootView;
+    this.btnBack = btnBack;
+    this.btnDone = btnDone;
     this.ivQrCode = ivQrCode;
-    this.tvDebugLabel = tvDebugLabel;
-    this.tvPollJson = tvPollJson;
-    this.tvQrPlaceholder = tvQrPlaceholder;
-    this.tvShowQrTitle = tvShowQrTitle;
+    this.tvQrHint = tvQrHint;
+    this.tvScreenTitle = tvScreenTitle;
   }
 
   @Override
   @NonNull
-  public ScrollView getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -73,38 +75,38 @@ public final class ActivityShowQrBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnBack;
+      ImageButton btnBack = ViewBindings.findChildViewById(rootView, id);
+      if (btnBack == null) {
+        break missingId;
+      }
+
+      id = R.id.btnDone;
+      MaterialButton btnDone = ViewBindings.findChildViewById(rootView, id);
+      if (btnDone == null) {
+        break missingId;
+      }
+
       id = R.id.ivQrCode;
       ImageView ivQrCode = ViewBindings.findChildViewById(rootView, id);
       if (ivQrCode == null) {
         break missingId;
       }
 
-      id = R.id.tvDebugLabel;
-      TextView tvDebugLabel = ViewBindings.findChildViewById(rootView, id);
-      if (tvDebugLabel == null) {
+      id = R.id.tvQrHint;
+      TextView tvQrHint = ViewBindings.findChildViewById(rootView, id);
+      if (tvQrHint == null) {
         break missingId;
       }
 
-      id = R.id.tvPollJson;
-      TextView tvPollJson = ViewBindings.findChildViewById(rootView, id);
-      if (tvPollJson == null) {
+      id = R.id.tvScreenTitle;
+      TextView tvScreenTitle = ViewBindings.findChildViewById(rootView, id);
+      if (tvScreenTitle == null) {
         break missingId;
       }
 
-      id = R.id.tvQrPlaceholder;
-      TextView tvQrPlaceholder = ViewBindings.findChildViewById(rootView, id);
-      if (tvQrPlaceholder == null) {
-        break missingId;
-      }
-
-      id = R.id.tvShowQrTitle;
-      TextView tvShowQrTitle = ViewBindings.findChildViewById(rootView, id);
-      if (tvShowQrTitle == null) {
-        break missingId;
-      }
-
-      return new ActivityShowQrBinding((ScrollView) rootView, ivQrCode, tvDebugLabel, tvPollJson,
-          tvQrPlaceholder, tvShowQrTitle);
+      return new ActivityShowQrBinding((LinearLayout) rootView, btnBack, btnDone, ivQrCode,
+          tvQrHint, tvScreenTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
