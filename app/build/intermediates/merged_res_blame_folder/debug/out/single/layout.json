@@ -8,10 +8,6 @@
         "source": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-main-6:\\layout\\item_result_option.xml"
     },
     {
-        "merged": "com.example.offlinevotingapp-mergeDebugResources-3:/layout/activity_scan_vote.xml",
-        "source": "com.example.offlinevotingapp-main-6:/layout/activity_scan_vote.xml"
-    },
-    {
         "merged": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-mergeDebugResources-3:\\layout\\item_vote_option.xml",
         "source": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-main-6:\\layout\\item_vote_option.xml"
     },
@@ -38,6 +34,10 @@
     {
         "merged": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-mergeDebugResources-3:\\layout\\item_poll.xml",
         "source": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-main-6:\\layout\\item_poll.xml"
+    },
+    {
+        "merged": "com.example.offlinevotingapp-mergeDebugResources-3:/layout/item_vote_option.xml",
+        "source": "com.example.offlinevotingapp-main-6:/layout/item_vote_option.xml"
     },
     {
         "merged": "C:\\Users\\ksnau\\.gradle\\daemon\\8.9\\com.example.offlinevotingapp-mergeDebugResources-3:\\layout\\activity_scan_vote.xml",

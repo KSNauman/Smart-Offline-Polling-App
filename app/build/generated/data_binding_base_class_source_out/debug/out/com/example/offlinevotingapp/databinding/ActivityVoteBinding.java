@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,18 +28,18 @@ public final class ActivityVoteBinding implements ViewBinding {
   public final MaterialButton btnSubmitVote;
 
   @NonNull
-  public final RadioGroup rgVoteOptions;
+  public final LinearLayout llVoteOptions;
 
   @NonNull
   public final TextView tvPollQuestion;
 
   private ActivityVoteBinding(@NonNull LinearLayout rootView, @NonNull ImageButton btnBack,
-      @NonNull MaterialButton btnSubmitVote, @NonNull RadioGroup rgVoteOptions,
+      @NonNull MaterialButton btnSubmitVote, @NonNull LinearLayout llVoteOptions,
       @NonNull TextView tvPollQuestion) {
     this.rootView = rootView;
     this.btnBack = btnBack;
     this.btnSubmitVote = btnSubmitVote;
-    this.rgVoteOptions = rgVoteOptions;
+    this.llVoteOptions = llVoteOptions;
     this.tvPollQuestion = tvPollQuestion;
   }
 
@@ -83,9 +82,9 @@ public final class ActivityVoteBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.rgVoteOptions;
-      RadioGroup rgVoteOptions = ViewBindings.findChildViewById(rootView, id);
-      if (rgVoteOptions == null) {
+      id = R.id.llVoteOptions;
+      LinearLayout llVoteOptions = ViewBindings.findChildViewById(rootView, id);
+      if (llVoteOptions == null) {
         break missingId;
       }
 
@@ -95,7 +94,7 @@ public final class ActivityVoteBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityVoteBinding((LinearLayout) rootView, btnBack, btnSubmitVote, rgVoteOptions,
+      return new ActivityVoteBinding((LinearLayout) rootView, btnBack, btnSubmitVote, llVoteOptions,
           tvPollQuestion);
     }
     String missingId = rootView.getResources().getResourceName(id);

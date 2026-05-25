@@ -8,9 +8,11 @@ color surface_dark
 color text_primary
 color text_secondary
 color white
+drawable bg_speaker_button
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_nfc_tap
+drawable ic_volume_up
 drawable progress_drawable
 drawable selector_vote_option
 id btnAddOption
@@ -28,6 +30,7 @@ id btnScanQr
 id btnScanVote
 id btnScanVoteQr
 id btnSharePoll
+id btnSpeak
 id btnSubmitVote
 id etOption
 id etQuestion
@@ -35,12 +38,13 @@ id etUserName
 id ivQrCode
 id llOptionsContainer
 id llResultsContainer
+id llVoteOptions
 id pbVotes
-id rgVoteOptions
 id rvPolls
 id toolbar
 id tvEmptyState
 id tvOptionName
+id tvOptionText
 id tvPercentage
 id tvPollQuestion
 id tvQrHint
